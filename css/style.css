@@ -1,6 +1,7 @@
 body {
   font-family: Montserrat;
   font-weight: 500;
+  background-color: #fafafa;
 }
 
 .wrapper {
@@ -74,6 +75,18 @@ body {
   flex: 1 1 auto;
 }
 
+.title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 142.5%;
+  color: #252B42;
+}
+
+.subtitle {
+  line-height: 142.8571428571%;
+  color: #737373;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -109,9 +122,8 @@ body {
 }
 
 .intro {
-  padding-top: 180px;
+  padding: 180px 0 190px 0;
   background: url(../img/intro/bg.jpg) center/cover no-repeat;
-  margin-bottom: 190px;
 }
 .intro__content {
   max-width: 400px;
@@ -156,5 +168,42 @@ body {
 @media (max-width: 425px) {
   .intro__buttons {
     gap: 5px;
+  }
+}
+
+.cards {
+  display: flex;
+  margin-top: -100px;
+  gap: 30px;
+}
+.cards__item {
+  flex: 1 1 33.333%;
+  padding: 35px 40px;
+  background: #fff;
+}
+.cards__item:last-child {
+  background: #0D5C63;
+}
+.cards__item:last-child .cards__title {
+  color: #fff;
+}
+.cards__item:last-child .cards__subtitle {
+  color: #fff;
+}
+.cards__logo {
+  margin-bottom: 10px;
+}
+.cards__title {
+  font-size: 24px;
+  line-height: 133.3333333333%;
+  margin-bottom: 10px;
+}
+@media (max-width: 900px) {
+  .cards {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .cards__item {
+    flex: 1 1 100%;
   }
 }/*# sourceMappingURL=style.css.map */
