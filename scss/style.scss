@@ -1,3 +1,8 @@
+$button-color: #FF7B47;
+$primary-color: #252B42;
+$secondary-color1: #737373;
+$secondary-color2: #0D5C63;
+
 body {
     font-family: Montserrat;
     font-weight: 500;
@@ -61,7 +66,7 @@ body {
         font-size: 14px;
         font-weight: 600;
         line-height: calc(24 / 14 * 100%);
-        color: #737373;
+        color: $secondary-color1;
         transition: color .1s ease-in-out;
 
         &:not(:last-child) {
@@ -69,7 +74,7 @@ body {
         }
 
         &:hover {
-            color: #FF7B47;
+            color: $button-color;
         }
     }
 
@@ -80,4 +85,114 @@ body {
         }
     }
 }
+
+// -----+ Main +--------------------------------------------------------
+.main {
+    flex: 1 1 auto;
+}
+
+// -----+ Button +--------------------------------------------------------
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 180px;
+    background: $button-color;
+    color: #fff;
+    font-weight: 700;
+    line-height: calc(28 / 14 * 100%);
+    border-radius: 50px;
+    transition: background .1s ease-in-out;
+
+    &:hover {
+        background: #d96c42;
+    }
+
+    @media (max-width: 767px) {
+        & {
+            width: 140px;
+            height: 40px;
+            font-size: 12px;
+        }
+    }
+}
+
+.btn_o {
+    background: transparent;
+    border: 1px solid $secondary-color2;
+    color: $secondary-color2;
+
+    &:hover {
+        background: $secondary-color2;
+        color: #fff;
+    }
+}
+
+
+// -----+ Intro +--------------------------------------------------------
+.intro {
+    padding-top: 180px;
+    background: url(../img/intro/bg.jpg) center / cover no-repeat;
+    margin-bottom: 190px;
+
+    // .intro__container
+    &__container {
+    }
+    // .intro__content
+    &__content {
+        max-width: 400px;
+    }
+    // .intro__title
+    &__title {
+        font-weight: 800;
+        font-size: 58px;
+        line-height: calc(80 / 58 * 100%);
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin-bottom: 35px;
+    }
+    // .intro__subtitle
+    &__subtitle {
+        font-size: 20px;
+        line-height: calc(30 / 20 * 100%);
+        color: $secondary-color1;
+        margin-bottom: 35px;
+    }
+    // .intro__buttons
+    &__buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+
+    @media (max-width: 900px) {
+        &__title {
+            font-size: 52px;
+            margin-bottom: 30px;
+        }
+        &__subtitle {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        &__title {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        &__subtitle {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        
+    }
+
+    @media (max-width: 425px) {
+        &__buttons {
+            gap: 5px;
+        }
+    }
+}
+
 
