@@ -173,7 +173,7 @@ body {
 
 .cards {
   display: flex;
-  margin-top: -100px;
+  margin: -100px 0 80px;
   gap: 30px;
 }
 .cards__item {
@@ -205,5 +205,53 @@ body {
   }
   .cards__item {
     flex: 1 1 100%;
+  }
+}
+
+.section-header {
+  text-align: center;
+}
+.section-header__title {
+  margin-bottom: 10px;
+}
+.experience__header {
+  margin-bottom: 50px;
+}
+.experience__cards {
+  display: flex;
+  gap: 30px;
+}
+.experience__card {
+  background-color: #fff;
+  padding: 30px;
+  text-align: center;
+  flex: 0 1 25%;
+}
+.experience__img {
+  margin-bottom: 20px;
+  height: 48px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.experience__counter {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 142.5%;
+  color: #252B42;
+  margin-bottom: 10px;
+}
+.experience__title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #737373;
+}
+@media (max-width: 900px) {
+  .experience__cards {
+    flex-wrap: wrap;
+  }
+  .experience__card {
+    flex: 1 1 auto;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -212,7 +212,7 @@ body {
 // -----+ Cards +--------------------------------------------------------
 .cards {
     display: flex;
-    margin-top: -100px;
+    margin: -100px 0 80px;
     gap: 30px;
 
     // .cards__item
@@ -260,5 +260,70 @@ body {
         }
     }
 }
+
+// -----+ Section-header +--------------------------------------------------------
+.section-header {
+    text-align: center;
+
+    &__title {
+        margin-bottom: 10px;
+    }
+    &__subtitle {
+    }
+}
+
+// -----+ Experience +--------------------------------------------------------
+.experience {
+
+    &__header {
+        margin-bottom: 50px;
+    }
+    
+    &__cards {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__card {
+        background-color: #fff;
+        padding: 30px;
+        text-align: center;
+        flex: 0 1 25%;
+    }
+
+    &__img {
+        margin-bottom: 20px;
+        height: 48px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    &__counter {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: calc(57 / 40 * 100%);
+        color: $primary-color;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: calc(24 / 16 * 100%);
+        color: $secondary-color1;
+    }
+
+    
+    @media (max-width:900px) {
+        &__cards {
+            flex-wrap: wrap;
+        }
+        &__card {
+            flex: 1 1 auto;
+        }
+    }
+}
+
 
 
