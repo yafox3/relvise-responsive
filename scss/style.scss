@@ -270,11 +270,22 @@ body {
     }
     &__subtitle {
     }
+
+    @media (max-width: 520px) {
+        &__subtitle {
+            font-size: 12px;
+        }
+
+        &__title {
+            font-size: 30px;
+        }
+    }
 }
 
 // -----+ Experience +--------------------------------------------------------
 .experience {
-
+    margin-bottom: 80px;
+    
     &__header {
         margin-bottom: 50px;
     }
@@ -325,5 +336,78 @@ body {
     }
 }
 
+// -----+ Features +--------------------------------------------------------
+.features {
+    padding-top: 125px;
+    margin-bottom: 100px;
+    // .features__header
+    &__header {
+        margin-bottom: 45px;
+    }
 
+    // .features__cards
+    &__cards {
+        display: flex;
+        gap: 30px
+    }
+
+    // .features__card
+    &__card {
+        background: #fff;
+        flex: 0 1 25%;
+        display: flex;
+        flex-direction: column;
+        min-height: 340px;
+    }
+
+    // .features__title
+    &__title {
+        padding-top: 30px;
+        font-size: 16px;
+        margin: 0 auto;
+        max-width: 170px;
+    }
+
+    // .features__subtitle
+    &__subtitle {
+        margin: 15px auto 30px;
+        max-width: 170px;
+        flex: 1 1 auto;
+    }
+
+    // .features__img
+    &__img {
+        img {
+            max-width: 100%;
+        }
+        margin: 0 auto;
+    }
+
+    
+    @media (max-width: 900px) {
+        & {
+            padding-top: 70px;
+        }
+        &__cards {
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        &__card {
+            flex: 0 1 auto;
+        }
+    }
+
+    @media (max-width: 767px) {
+        & {
+            padding-top: 50px;
+        }
+    }
+
+    @media (max-width: 520px) {
+        & {
+            padding-top: 30px;
+        }
+    }
+}
 
